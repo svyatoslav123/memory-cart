@@ -53,10 +53,10 @@ def menu_window():
     def add_quest_func():
         a = {
             "Запитання" : quest_edit.text(),
-            "Правильна відповідь": "",
-            "Неправильна 1": "",
-            "Неправильна 2": "",
-            "Неправильна 3": "",
+            "Правильна відповідь": right_ans_input.text(),
+            "Неправильна 1": wrong_ans_input1.text(),
+            "Неправильна 2": wrong_ans_input2.text(),
+            "Неправильна 3": wrong_ans_input3.text(),
 
 
         }

@@ -1,4 +1,6 @@
 import random
+
+import bublik
 import menu_window
 from PyQt5.QtWidgets import *
 
@@ -10,6 +12,7 @@ window = QWidget()
 window.resize(700, 500)
 
 menu_btn = QPushButton("Меню")
+redact_btn = QPushButton("Редакт")
 next_quest_btn = QPushButton("Наступне запитання")
 group_box = QGroupBox("Варіанти відповідей")
 question_lbl = QLabel("Яблуко")
@@ -26,6 +29,7 @@ vidpovistu_btn = QPushButton("Відповісти")
 main_line = QVBoxLayout()
 h1 = QHBoxLayout()
 h1.addWidget(menu_btn)
+h1.addWidget(redact_btn)
 h1.addStretch(1)
 main_line.addLayout(h1)
 main_line.addWidget(question_lbl)
@@ -75,7 +79,15 @@ def menu_show():
     window.hide()
     menu_window.menu_window()
     window.show()
+
+def redact_show():
+    bublik.bublik()
+def redact_show():
+    window.hide()
+    bublik.bublik()
+    window.show()
 menu_btn.clicked.connect(menu_show)
+redact_btn.clicked.connect(redact_show)
 vidpovistu_btn.clicked.connect(answer_click)
 next_quest_btn.clicked.connect(next_quest_func)
 window.show()
