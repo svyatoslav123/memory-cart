@@ -57,7 +57,8 @@ def bublik():
 
     main_line.addWidget(add_quest_btn)
     add_quest_btn.clicked.connect(add_quest_func)
-    window.setLayout(main_line) main_line =  QVBoxLayout()
+    window.setLayout(main_line)
+    main_line =  QVBoxLayout()
 
     h1 = QHBoxLayout()
     h1.addWidget(quest_lbl)
